@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+    <title>Coffee Prototype</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.1/angular.min.js" integrity="sha256-dCC0CIHS73s9HS7yznCTJPdV4goXc3QYMp5qqorMxJE=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.1/angular-resource.min.js" integrity="sha256-YdF72aE8dlV9riziRI06oyb5zRlmdUIVmezvSE0PZko=" crossorigin="anonymous"></script>
+    <script src="./lib/angular-data-table-master/release/dataTable.min.js" type="text/javascript"></script>
+
+    <!-- Material Design fonts -->
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- Bootstrap Material Design -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/4.0.2/bootstrap-material-design.css" integrity="sha256-c9OCpXgYepI8baar2x81YigAWryLIoQ2k0/7cCb1JAg=" crossorigin="anonymous" />
+
+    <!-- Angular Data Table -->
+    <link rel="stylesheet" href="./lib/angular-data-table-master/release/dataTable.css" />
+    <link rel="stylesheet" href="./lib/angular-data-table-master/release/material.css"/>
+    <link rel="stylesheet" href="./lib/angular-data-table-master/release/icons.css" />
+
+    <style>
+        body {
+            font-family: 'RobotoDraft', 'Roboto', 'Helvetica Neue, Helvetica, Arial', sans-serif;
+            font-style: normal;
+            font-weight: 300;
+            font-size: .7rem;
+            line-height: 2rem;
+            letter-spacing: 0.01rem;
+            color: #212121;
+            background-color: #f5f5f5;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+            margin: 25px;
+        }
+
+        label {
+            padding: 10px;
+            font-weight: 200;
+        }
+
+        .form-control {
+            min-width: 100px;
+            margin-right: 20px;
+        }
+
+    </style>
+
+
+</head>
+<body ng-app="coffee-app">
+<div class="container-fluid">
+    <h1>Hello, Coffee Lover</h1>
+    <p>
+        Welcome to the best coffee recommending app in the whole world! Below you can search our extensive database of coffee beans and find the coffee that's best for you.
+    </p>
+    <button class="btn btn-default" ng-click="todo=!todo">Click to show TODO List</button>
+    <div ng-if="todo">
+        <ol>
+            <li>
+                Add functionality to filters
+            </li>
+            <li>
+                Format cupping notes
+            </li>
+            <li>
+                Add search bar
+            </li>
+            <li>
+                Add proper hosting solution
+            </li>
+        </ol>
+    </div>
+    <br />
+    <coffee-table></coffee-table>
+</div>
+
+</body>
+<script src="scripts/app.js" type="text/javascript"></script>
+<script src="scripts/coffee-table/services/cofffee-table.service.js" type="text/javascript"></script>
+<script src="scripts/coffee-table/directives/coffee-table.directive.js" type="text/javascript"></script>
+</html>
